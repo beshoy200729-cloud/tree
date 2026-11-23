@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Facebook Profile Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- CSS-only state: radios = tabs, checkboxes = dark mode / mobile menu -->
+  <input type="radio" name="tab" id="t-posts" checked hidden>
+  <input type="radio" name="tab" id="t-about" hidden>
+  <input type="radio" name="tab" id="t-friends" hidden>
+  <input type="radio" name="tab" id="t-photos" hidden>
+  <input type="radio" name="tab" id="t-videos" hidden>
+  <input type="checkbox" id="dark" hidden>
+  <input type="checkbox" id="menu" hidden>
+
+  <header class="nav">
+    <div class="nav-left">
+      <a href="#" class="logo" aria-label="Facebook">f</a>
+      <label class="search"><span>🔍</span><input type="search" placeholder="Search Facebook"></label>
+    </div>
+    <nav class="nav-center" aria-label="Main">
+      <a class="nav-btn active" href="#" title="Home">🏠<em>Home</em></a>
+      <a class="nav-btn" href="#" title="Friends">👥<em>Friends</em></a>
+      <a class="nav-btn" href="#" title="Watch">▶️<em>Watch</em></a>
+      <a class="nav-btn" href="#" title="Marketplace">🏪<em>Marketplace</em></a>
+    </nav>
+    <div class="nav-right">
+      <label class="icon-btn menu-toggle" for="menu" aria-label="Menu">☰</label>
+      <label class="icon-btn" for="dark" aria-label="Toggle dark mode and switch profile"
+        title="Dark mode + switch profile"><span class="moon">🌙</span><span class="sun">☀️</span></label>
+      <a class="icon-btn" href="#" title="Notifications">🔔</a>
+      <a class="icon-btn" href="#" title="Messenger">💬</a>
+      <details class="dropdown-wrap">
+        <summary class="avatar-btn"><img class="avatar-img p-a"
+            src="images/profil_a.jpg"
+            alt="Account menu"><img class="avatar-img p-b"
+            src="images/profile_b.jpg"
+            alt="Account menu"></summary>
+        <div class="dropdown right">
+          <a href="#edit">✏️ Edit profile</a>
+          <label for="dark" class="menu-item"><span class="moon">🌙 Dark mode</span><span class="sun">☀️ Light
+              mode</span></label>
+        </div>
+      </details>
+    </div>
+  </header>
+
+  <section class="profile-head">
+    <div class="head-inner">
+      <div class="cover p-a" style="background-image:url('images/cover_a.jpg')"></div>
+      <div class="cover p-b" style="background-image:url('images/cover_b.jpg')"></div>
+      <div class="head-row">
+        <div class="avatar-big"><img class="avatar-img p-a" src="images/profil_a.jpg"
+            alt="Profile picture"><img class="avatar-img p-b" src="images/profile_b.jpg"></div>
+        <div class="head-info">
+          <h1 class="p-a">شجرة اورشليم</h1>
+          <h1 class="p-b">شجرة الاتنين</h1>
+          <p class="muted">400K friends</p>
+          <div class="stack"><img
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23e4405f%22/%3E%3Ctext%20x%3D%22100%22%20y%3D%22122%22%20font-size%3D%2280%22%20font-family%3D%22Arial%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3E%D8%A7%D8%A7%3C/text%3E%3C/svg%3E"
+              alt=""><img
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%2342b72a%22/%3E%3Ctext%20x%3D%22100%22%20y%3D%22122%22%20font-size%3D%2280%22%20font-family%3D%22Arial%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3E%D8%B4%D8%A7%3C/text%3E%3C/svg%3E"
+              alt=""><img
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23f7b928%22/%3E%3Ctext%20x%3D%22100%22%20y%3D%22122%22%20font-size%3D%2280%22%20font-family%3D%22Arial%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3E%D8%A7%D8%A7%3C/text%3E%3C/svg%3E"
+              alt=""><img
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%238a3ab9%22/%3E%3Ctext%20x%3D%22100%22%20y%3D%22122%22%20font-size%3D%2280%22%20font-family%3D%22Arial%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3E%D9%86%D8%A7%3C/text%3E%3C/svg%3E"
+              alt=""></div>
+        </div>
+        <div class="head-actions">
+          <a class="btn primary" href="#">＋ Add to story</a>
+          <a class="btn" href="#edit">✏️ Edit profile</a>
+        </div>
+      </div>
+      <nav class="tabs" role="tablist">
+        <label class="tab" for="t-posts">Posts</label>
+        <label class="tab" for="t-about">About</label>
+        <label class="tab" for="t-friends">Friends</label>
+        <label class="tab" for="t-photos">Photos</label>
+        <label class="tab" for="t-videos">Videos</label>
+      </nav>
+    </div>
+  </section>
+
+  <main class="layout">
+    <aside class="left">
+      <section class="card">
+        <h2>Intro</h2>
+        <p class="bio p-a">خضرة ومزهزها</p>
+        <p class="bio p-b">نشفه معصعصه</p>
+        <ul class="intro-list p-a">
+          <li>💼 بعمل احلي تين ممكن تكله</li>
+          <li>🏠 Lives in جنب اورشليم</li>
+          <li>❤️ Single</li>
+        </ul>
+        <ul class="intro-list p-b" style="--show:grid">
+          <li>💼 work at عاطل</li>
+          <li>🏠 Lives in خلاص مت</li>
+          <a class="btn block center" href="#edit">Edit details</a>
+      </section>
+      
+      <section class="card">
+        <div class="card-top">
+          <h2>Friends</h2><label class="link" for="t-friends">See all friends</label>
+        </div>
+        <p class="muted">4 friends</p>
+        <div class="friend-grid">
+          <figure><img
+              src="images\friend1.jpg"
+              alt="">
+            <figcaption>المشمشية 😉</figcaption>
+          </figure>
+          <figure><img
+              src="images\friend2.jpg"
+              alt="">
+            <figcaption>البرقوقه</figcaption>
+          </figure>
+        </div>
+      </section>
+    </aside>
+
+    <div class="right">
+      <div class="panel" id="panel-posts">
+        <section class="card composer">
+          <div class="row"><img class="avatar-img p-a sm"
+              src="images\profil_a.jpg"
+              alt=""><img class="avatar-img p-b sm"
+              src="images\profile_b.jpg"
+              alt=""><a class="composer-input" href="#compose">What's on your mind?</a></div>
+          <hr>
+          <div class="row around"><a class="btn flat center" href="#compose">🖼️ Photo/video</a><a
+              class="btn flat center" href="#compose">😊 Feeling/activity</a></div>
+        </section>
+        <!-- ===== post a 6===== -->
+        <article class="card post p-a">
+          <input type="checkbox" class="likechk" id="like6" hidden>
+          <div class="post-head"><img class="avatar-img sm" src="images/profil_a.jpg"
+              alt="">
+            <div class="who"><strong>المرنم/ داود ابن يسي</strong><small>5h</small></div>
+          </div>
+          <img class="post-img" src="images/post_1_a.png" alt="">
+          <div class="counts"><span>👍 <b class="n0">20.4M</b><b class="n1">13k</b></span><span>305.3k comments · 50kshares</span>
+          </div>
+          <div class="actions"><label for="like6" class="likebtn" tabindex="0">👍 Like</label><a href="#c6">💬
+              Comment</a><a href="#share">↗️ Share</a></div>
+          <div class="comments" id="c6"></div>
+        </article>
+        
+        <!-- ===== post b 0===== -->
+        <article class="card post p-b">
+          <input type="checkbox" class="likechk" id="like1b" hidden>
+          <div class="post-head">
+            <img class="avatar-img sm" src="images/profile_b.jpg" alt="">
+            <div class="who"><strong>داود</strong><small>8h</small></div>
+          </div>
+          <img class="post-img" src="images/post_1_b.png" alt="">
+          <div class="counts"><span>😭 <b class="n0">70M</b><b class="n1">70k</b></span><span>0 comments · 1 shares</span>
+          </div>
+          <div class="actions">
+            <label for="like1b" class="likebtn" tabindex="0">👍 Like</label>
+            <a href="#c1b">💬 Comment</a>
+            <a href="#share">↗️ Share</a>
+          </div>
+          <div class="comments" id="c1b"></div>
+        </article>
+        
+      </div>
+    </div>
+    <div class="panel" id="panel-friends">
+      <section class="card">
+        <h2>Friends</h2>
+        <div class="friend-grid big">
+          <figure><img
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23e4405f%22/%3E%3Ctext%20x%3D%22100%22%20y%3D%22122%22%20font-size%3D%2280%22%20font-family%3D%22Arial%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3E%D8%A7%D8%A7%3C/text%3E%3C/svg%3E"
+              alt="">
+            <figcaption>ابيناداب ابن يسي</figcaption>
+          </figure>
+          <figure><img
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%2342b72a%22/%3E%3Ctext%20x%3D%22100%22%20y%3D%22122%22%20font-size%3D%2280%22%20font-family%3D%22Arial%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3E%D8%B4%D8%A7%3C/text%3E%3C/svg%3E"
+              alt="">
+            <figcaption>شِمْعَى ابن يسي</figcaption>
+          </figure>
+          <figure><img
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23f7b928%22/%3E%3Ctext%20x%3D%22100%22%20y%3D%22122%22%20font-size%3D%2280%22%20font-family%3D%22Arial%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3E%D8%A7%D8%A7%3C/text%3E%3C/svg%3E"
+              alt="">
+            <figcaption>الياب ابن يسي</figcaption>
+          </figure>
+          <figure><img
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%238a3ab9%22/%3E%3Ctext%20x%3D%22100%22%20y%3D%22122%22%20font-size%3D%2280%22%20font-family%3D%22Arial%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3E%D9%86%D8%A7%3C/text%3E%3C/svg%3E"
+              alt="">
+            <figcaption>نَثْنِئِيلَ ابن يسي</figcaption>
+          </figure>
+        </div>
+      </section>
+    </div>
+    <div class="panel" id="panel-photos">
+      <section class="card">
+        <h2>Photos</h2>
+        <div class="photo-grid big"><a href="#photo0"><img
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22600%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23e4405f%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%238a3ab9%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22600%22%20height%3D%22600%22%20fill%3D%22url%28%23g%29%22/%3E%3Ccircle%20cx%3D%22190%22%20cy%3D%22170%22%20r%3D%2270%22%20fill%3D%22%23fff%22%20opacity%3D%22.6%22/%3E%3Cpath%20d%3D%22M0%20600V430l160-110%20150%20100%20130-80%20160%20120v140z%22%20fill%3D%22%23000%22%20opacity%3D%22.25%22/%3E%3C/svg%3E"
+              alt=""></a><a href="#photo1"><img
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22600%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2342b72a%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2300a5a5%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22600%22%20height%3D%22600%22%20fill%3D%22url%28%23g%29%22/%3E%3Ccircle%20cx%3D%22230%22%20cy%3D%22170%22%20r%3D%2270%22%20fill%3D%22%23fff%22%20opacity%3D%22.6%22/%3E%3Cpath%20d%3D%22M0%20600V430l160-110%20150%20100%20130-80%20160%20120v140z%22%20fill%3D%22%23000%22%20opacity%3D%22.25%22/%3E%3C/svg%3E"
+              alt=""></a><a href="#photo2"><img
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22600%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23f7b928%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f5533d%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22600%22%20height%3D%22600%22%20fill%3D%22url%28%23g%29%22/%3E%3Ccircle%20cx%3D%22270%22%20cy%3D%22170%22%20r%3D%2270%22%20fill%3D%22%23fff%22%20opacity%3D%22.6%22/%3E%3Cpath%20d%3D%22M0%20600V430l160-110%20150%20100%20130-80%20160%20120v140z%22%20fill%3D%22%23000%22%20opacity%3D%22.25%22/%3E%3C/svg%3E"
+              alt=""></a><a href="#photo3"><img
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22600%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%238a3ab9%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%234267b2%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22600%22%20height%3D%22600%22%20fill%3D%22url%28%23g%29%22/%3E%3Ccircle%20cx%3D%22310%22%20cy%3D%22170%22%20r%3D%2270%22%20fill%3D%22%23fff%22%20opacity%3D%22.6%22/%3E%3Cpath%20d%3D%22M0%20600V430l160-110%20150%20100%20130-80%20160%20120v140z%22%20fill%3D%22%23000%22%20opacity%3D%22.25%22/%3E%3C/svg%3E"
+              alt=""></a><a href="#photo4"><img
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22600%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2300a5a5%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%231877f2%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22600%22%20height%3D%22600%22%20fill%3D%22url%28%23g%29%22/%3E%3Ccircle%20cx%3D%22350%22%20cy%3D%22170%22%20r%3D%2270%22%20fill%3D%22%23fff%22%20opacity%3D%22.6%22/%3E%3Cpath%20d%3D%22M0%20600V430l160-110%20150%20100%20130-80%20160%20120v140z%22%20fill%3D%22%23000%22%20opacity%3D%22.25%22/%3E%3C/svg%3E"
+              alt=""></a><a href="#photo5"><img
+              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22600%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23f5533d%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23e4405f%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22600%22%20height%3D%22600%22%20fill%3D%22url%28%23g%29%22/%3E%3Ccircle%20cx%3D%22390%22%20cy%3D%22170%22%20r%3D%2270%22%20fill%3D%22%23fff%22%20opacity%3D%22.6%22/%3E%3Cpath%20d%3D%22M0%20600V430l160-110%20150%20100%20130-80%20160%20120v140z%22%20fill%3D%22%23000%22%20opacity%3D%22.25%22/%3E%3C/svg%3E"
+              alt=""></a></div>
+      </section>
+    </div>
+    <div class="panel" id="panel-videos">
+      <section class="card">
+        <h2>Videos</h2>
+        <div class="empty">🎬<p>No videos to show yet.</p>
+        </div>
+      </section>
+    </div>
+    </div>
+  </main>
+
+  <a class="modal" id="photo0" href="#"><img class="lightbox"
+      src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22600%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23e4405f%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%238a3ab9%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22600%22%20height%3D%22600%22%20fill%3D%22url%28%23g%29%22/%3E%3Ccircle%20cx%3D%22190%22%20cy%3D%22170%22%20r%3D%2270%22%20fill%3D%22%23fff%22%20opacity%3D%22.6%22/%3E%3Cpath%20d%3D%22M0%20600V430l160-110%20150%20100%20130-80%20160%20120v140z%22%20fill%3D%22%23000%22%20opacity%3D%22.25%22/%3E%3C/svg%3E"
+      alt=""></a><a class="modal" id="photo1" href="#"><img class="lightbox"
+      src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22600%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2342b72a%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2300a5a5%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22600%22%20height%3D%22600%22%20fill%3D%22url%28%23g%29%22/%3E%3Ccircle%20cx%3D%22230%22%20cy%3D%22170%22%20r%3D%2270%22%20fill%3D%22%23fff%22%20opacity%3D%22.6%22/%3E%3Cpath%20d%3D%22M0%20600V430l160-110%20150%20100%20130-80%20160%20120v140z%22%20fill%3D%22%23000%22%20opacity%3D%22.25%22/%3E%3C/svg%3E"
+      alt=""></a><a class="modal" id="photo2" href="#"><img class="lightbox"
+      src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22600%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23f7b928%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f5533d%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22600%22%20height%3D%22600%22%20fill%3D%22url%28%23g%29%22/%3E%3Ccircle%20cx%3D%22270%22%20cy%3D%22170%22%20r%3D%2270%22%20fill%3D%22%23fff%22%20opacity%3D%22.6%22/%3E%3Cpath%20d%3D%22M0%20600V430l160-110%20150%20100%20130-80%20160%20120v140z%22%20fill%3D%22%23000%22%20opacity%3D%22.25%22/%3E%3C/svg%3E"
+      alt=""></a><a class="modal" id="photo3" href="#"><img class="lightbox"
+      src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22600%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%238a3ab9%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%234267b2%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22600%22%20height%3D%22600%22%20fill%3D%22url%28%23g%29%22/%3E%3Ccircle%20cx%3D%22310%22%20cy%3D%22170%22%20r%3D%2270%22%20fill%3D%22%23fff%22%20opacity%3D%22.6%22/%3E%3Cpath%20d%3D%22M0%20600V430l160-110%20150%20100%20130-80%20160%20120v140z%22%20fill%3D%22%23000%22%20opacity%3D%22.25%22/%3E%3C/svg%3E"
+      alt=""></a><a class="modal" id="photo4" href="#"><img class="lightbox"
+      src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22600%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2300a5a5%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%231877f2%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22600%22%20height%3D%22600%22%20fill%3D%22url%28%23g%29%22/%3E%3Ccircle%20cx%3D%22350%22%20cy%3D%22170%22%20r%3D%2270%22%20fill%3D%22%23fff%22%20opacity%3D%22.6%22/%3E%3Cpath%20d%3D%22M0%20600V430l160-110%20150%20100%20130-80%20160%20120v140z%22%20fill%3D%22%23000%22%20opacity%3D%22.25%22/%3E%3C/svg%3E"
+      alt=""></a><a class="modal" id="photo5" href="#"><img class="lightbox"
+      src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22600%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23f5533d%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23e4405f%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22600%22%20height%3D%22600%22%20fill%3D%22url%28%23g%29%22/%3E%3Ccircle%20cx%3D%22390%22%20cy%3D%22170%22%20r%3D%2270%22%20fill%3D%22%23fff%22%20opacity%3D%22.6%22/%3E%3Cpath%20d%3D%22M0%20600V430l160-110%20150%20100%20130-80%20160%20120v140z%22%20fill%3D%22%23000%22%20opacity%3D%22.25%22/%3E%3C/svg%3E"
+      alt=""></a>
+
+  <div class="modal" id="compose">
+    <div class="dialog">
+      <header>
+        <h3>Create post</h3><a class="close" href="#" aria-label="Close">✕</a>
+      </header>
+      <div class="body">
+        <p class="muted">Posting needs a server or JavaScript to save data. This is a static, JS-free page.</p>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="share">
+    <div class="dialog">
+      <header>
+        <h3>Share post</h3><a class="close" href="#" aria-label="Close">✕</a>
+      </header>
+      <div class="body">
+        <p class="muted">Sharing isn't available in the static version.</p>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="edit">
+    <div class="dialog">
+      <header>
+        <h3>Edit profile</h3><a class="close" href="#" aria-label="Close">✕</a>
+      </header>
+      <div class="body">
+        <p class="muted">To change your details, edit the text in index.html directly.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
